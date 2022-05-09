@@ -27,6 +27,7 @@ public class HigherPosition {
 		}
 		System.out.printf("\nHIGHER VALUE: " + higher);
 		System.out.printf("\nHIGHER VALUE POSITION: " + position);
+		sc.close();
 	}
 
 }
