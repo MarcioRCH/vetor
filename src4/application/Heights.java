@@ -34,7 +34,22 @@ public class Heights {
 			sum += vect[i].getHeight();
 		}
 		double avg = sum / n;
-		System.out.println("Average height: " + avg);
+		System.out.printf("Average height: %.2f\n", avg);
+		
+		double percent = 0.0;
+		sum = 0.0;
+		for(int i = 0; i < vect.length; i++) {
+			if(vect[i].getAge() < 16) {
+				sum += 1;
+			}
+		}
+		percent = (100 / n) * sum;
+		System.out.printf("People under 16 years old: %.2f%%\n", percent);
+		for(int i = 0; i < vect.length; i++) {
+			if(vect[i].getAge() < 16) {
+				System.out.println(vect[i].getName());
+			}
+		}
 		sc.close();
 	}
 }
